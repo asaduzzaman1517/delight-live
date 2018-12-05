@@ -1,0 +1,743 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:600|Open+Sans:300,600);
+/*---------------------------------------
+    Template name: Delight -Restaurant & Cafe Template
+    Template URI: http://delight.compasstheme.net
+    Description: Delight is made for restaurant and cafe business
+    Template Author: Beetheme_
+    Template Author URI: https://themeforest.net/user/beetheme_
+    Version: 1.0
+
+-----------------------------------------
+    Table of contents
+-----------------------------------------
+    1. Base Style
+        1.1 Global Style
+        1.2 Default Body Font Family
+        1.3 from form control style
+    2. Module Style
+        2.1 Header
+        2.2 Custom Button Style
+        2.3 Hero Section Style
+        2.4 About Section
+            2.4.1 About Restaurant Section
+        2.5 Chef Section Style
+        2.6 Deal
+        2.7 Menu Section Style
+        2.8 Reservaion
+        2.9 Food Gallery
+        2.10 Testimonial
+        2.11 Event
+        2.12 Blog
+        2.13 Footer
+        2.14 Loader
+            2.14.1 Loader Animation
+    3. State Style
+        3.1 Full Screen Navigation
+        3.2 Vertical center
+    4. Theme Style
+        4.1 Background
+        4.2 Logo
+        4.3 Text ornament with theme color
+        4.4 Section Padding
+        4.5 Hr Style
+        4.6 Full Screen Height
+        4.7 Rating Color
+        4.8 theme Color
+        4.9 card icon
+        4.10 Icon
+        4.11 Theme color dark
+        4.12 Vertical alignment
+        4.13 Image full width
+        4.14 padding for medium screen only
+    
+-----------------------------------------*/
+/*---------------------------------------
+/*  1. Base Style
+-----------------------------------------*/
+/* 1.1 Global Style */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  color: #1D1D2A;
+  text-transform: uppercase; }
+
+/* 1.2 Default Body Font Family */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: #888888; }
+
+/* 1.3 from form control style */
+.form-control {
+  border-radius: .1rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: .7rem;
+  letter-spacing: .15rem;
+  text-transform: uppercase; }
+  .form-control:focus {
+    border-color: #ced4da;
+    box-shadow: none; }
+
+.input-group-text {
+  border-radius: .1rem; }
+
+.blockquote {
+  font-size: 1rem; }
+
+/*
+ *  Owl Carousel - Core
+ */
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1; }
+  .owl-carousel .owl-stage {
+    position: relative;
+    touch-action: manipulation;
+    -moz-backface-visibility: hidden;
+    /* fix firefox animation glitch */ }
+  .owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0; }
+  .owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px); }
+  .owl-carousel .owl-wrapper,
+  .owl-carousel .owl-item {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0); }
+  .owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none; }
+  .owl-carousel .owl-item img {
+    display: block;
+    width: 100%; }
+  .owl-carousel .owl-nav.disabled,
+  .owl-carousel .owl-dots.disabled {
+    display: none; }
+  .owl-carousel .owl-nav .owl-prev,
+  .owl-carousel .owl-nav .owl-next,
+  .owl-carousel .owl-dot {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  .owl-carousel .owl-nav button.owl-prev,
+  .owl-carousel .owl-nav button.owl-next,
+  .owl-carousel button.owl-dot {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit; }
+  .owl-carousel.owl-loaded {
+    display: block; }
+  .owl-carousel.owl-loading {
+    opacity: 0;
+    display: block; }
+  .owl-carousel.owl-hidden {
+    opacity: 0; }
+  .owl-carousel.owl-refresh .owl-item {
+    visibility: hidden; }
+  .owl-carousel.owl-drag .owl-item {
+    touch-action: pan-y;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  .owl-carousel.owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: grab; }
+  .owl-carousel.owl-rtl {
+    direction: rtl; }
+  .owl-carousel.owl-rtl .owl-item {
+    float: right; }
+
+/* No Js */
+.no-js .owl-carousel {
+  display: block; }
+
+/*
+ *  Owl Carousel - Animate Plugin
+ */
+.owl-carousel .animated {
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+.owl-carousel .owl-animated-in {
+  z-index: 0; }
+
+.owl-carousel .owl-animated-out {
+  z-index: 1; }
+
+.owl-carousel .fadeOut {
+  -webkit-animation-name: fadeOut;
+          animation-name: fadeOut; }
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+/*
+ * 	Owl Carousel - Auto Height Plugin
+ */
+.owl-height {
+  transition: height 500ms ease-in-out; }
+
+/*
+ * 	Owl Carousel - Lazy Load Plugin
+ */
+.owl-carousel .owl-item {
+  /**
+			This is introduced due to a bug in IE11 where lazy loading combined with autoheight plugin causes a wrong
+			calculation of the height of the owl-item that breaks page layouts
+		 */ }
+  .owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    transition: opacity 400ms ease; }
+  .owl-carousel .owl-item .owl-lazy[src^=""], .owl-carousel .owl-item .owl-lazy:not([src]) {
+    max-height: 0; }
+  .owl-carousel .owl-item img.owl-lazy {
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d; }
+
+/*
+ * 	Owl Carousel - Video Plugin
+ */
+.owl-carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000; }
+
+.owl-carousel .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url(img/owl.video.play.png) no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  transition: -webkit-transform 100ms ease;
+  transition: transform 100ms ease;
+  transition: transform 100ms ease, -webkit-transform 100ms ease; }
+
+.owl-carousel .owl-video-play-icon:hover {
+  -webkit-transform: scale(1.3, 1.3);
+          transform: scale(1.3, 1.3); }
+
+.owl-carousel .owl-video-playing .owl-video-tn,
+.owl-carousel .owl-video-playing .owl-video-play-icon {
+  display: none; }
+
+.owl-carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: opacity 400ms ease; }
+
+.owl-carousel .owl-video-frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%; }
+
+/*
+ * 	Default theme - Owl Carousel CSS File
+ */
+.owl-theme .owl-nav {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent; }
+  .owl-theme .owl-nav [class*='owl-'] {
+    color: #FFF;
+    font-size: 14px;
+    margin: 5px;
+    padding: 4px 7px;
+    background: #D6D6D6;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px; }
+    .owl-theme .owl-nav [class*='owl-']:hover {
+      background: #869791;
+      color: #FFF;
+      text-decoration: none; }
+  .owl-theme .owl-nav .disabled {
+    opacity: 0.5;
+    cursor: default; }
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 10px; }
+
+.owl-theme .owl-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent; }
+  .owl-theme .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+    *display: inline; }
+    .owl-theme .owl-dots .owl-dot span {
+      width: 10px;
+      height: 10px;
+      margin: 5px 7px;
+      background: #D6D6D6;
+      display: block;
+      -webkit-backface-visibility: visible;
+      transition: opacity 200ms ease;
+      border-radius: 30px; }
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+      background: #869791; }
+
+/*---------------------------------------
+    2. Module Style
+-----------------------------------------*/
+/* 2.1 Header */
+@media screen and (min-width: 992px) {
+  .header .h4 {
+    font-size: .8rem;
+    margin-bottom: 0; } }
+
+/* 2.2 Custom Button Style*/
+.btn {
+  border-radius: .1rem; }
+  .btn-themecolor {
+    background: #FF7EB3; }
+  .btn-text {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: .7rem;
+    letter-spacing: .15rem;
+    color: #f8f9fa;
+    font-weight: 600;
+    text-transform: uppercase; }
+  .btn-text-light {
+    color: #f8f9fa; }
+  .btn:hover {
+    color: #ffe4ef; }
+
+/* 2.3 Hero Section Style */
+.hero {
+  width: 100%;
+  height: 100%;
+  background: url(img/bg-6.jpeg) center center no-repeat;
+  background-size: cover; }
+  .hero--overlay {
+    background: rgba(0, 0, 0, 0.7); }
+    @media screen and (min-width: 992px) {
+      .hero--overlay {
+        background: rgba(0, 0, 0, 0.7); } }
+  .hero--title {
+    font-size: 2rem;
+    color: #f8f9fa; }
+    @media screen and (min-width: 768px) {
+      .hero--title {
+        font-size: 2.5rem; } }
+
+/* 2.4 About Section */
+.about--bg {
+  width: 100%;
+  background: url(img/our-story.png) top center no-repeat;
+  background-size: contain;
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .about--bg {
+      display: block; } }
+
+/* 2.4.1 About Restaurant Section */
+.about-restaurant {
+  background: white; }
+  .about-restaurant--bg {
+    background: url(img/about-restaurant.png) top center no-repeat;
+    background-size: contain;
+    display: none; }
+    @media screen and (min-width: 768px) {
+      .about-restaurant--bg {
+        display: block; } }
+
+/* 2.5 About Chef Section */
+.chef--gallery {
+  margin: 1rem 0; }
+  @media screen and (min-width: 768px) {
+    .chef--gallery {
+      margin: 0 0 2rem 0; } }
+
+.chef--img {
+  width: 100%;
+  margin-bottom: .5rem; }
+
+/* 2.6 Deal */
+.deal {
+  background: white; }
+
+/* 2.7 Menu Section Style */
+.menu--nav {
+  background: #eff0f9; }
+  @media screen and (min-width: 768px) {
+    .menu--nav {
+      background: #1B2144;
+      text-align: center; } }
+
+.menu--text {
+  font-family: "Open Sans", sans-serif;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: .9rem;
+  color: #9292b4; }
+  .menu--text:hover {
+    color: #1D1D2A; }
+    @media screen and (min-width: 768px) {
+      .menu--text:hover {
+        background: #FF7EB3;
+        color: #f8f9fa; } }
+  @media screen and (min-width: 768px) {
+    .menu--text {
+      font-size: 1rem;
+      font-weight: 300; } }
+
+.menu--icons {
+  display: none !important; }
+  @media screen and (min-width: 768px) {
+    .menu--icons {
+      display: block !important;
+      font-size: 2rem; } }
+
+@media screen and (min-width: 768px) {
+  .menu--active {
+    background: #FF7EB3;
+    color: #f8f9fa; } }
+
+/* 2.8 Reservaion */
+@media screen and (min-width: 768px) {
+  .reservation {
+    background: url(img/chef-6.jpg) center center no-repeat fixed;
+    background-size: cover;
+    position: relative; } }
+
+@media screen and (min-width: 768px) {
+  .reservation--overlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute; } }
+
+/* 2.9 Gallery Style */
+.food-gallery {
+  background: white; }
+  .food-gallery--box {
+    position: relative; }
+    .food-gallery--box::before, .food-gallery--box::after {
+      content: '';
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      bottom: 1rem;
+      right: 1rem;
+      background: rgba(255, 126, 179, 0.9);
+      opacity: 0;
+      transition: all ease-in-out 300ms;
+      -webkit-transform: scale(0);
+              transform: scale(0); }
+    .food-gallery--box:hover::before, .food-gallery--box ::after {
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1); }
+    .food-gallery--box:hover .food-gallery--text {
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1); }
+  .food-gallery--img {
+    width: 100%; }
+  .food-gallery--link {
+    color: #f8f9fa; }
+    .food-gallery--link:hover {
+      text-decoration: none;
+      color: #ffe4ef; }
+  .food-gallery--text {
+    position: absolute;
+    left: 2rem;
+    bottom: 3rem;
+    color: #f8f9fa;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+    transition: all ease-in-out 300ms;
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+
+/* 2.10 Testimonial */
+@media screen and (min-width: 768px) {
+  .testimonial--slider {
+    border: 10px solid #FF7EB3; } }
+
+.testimonial--img {
+  display: inline-block !important;
+  width: 5rem !important;
+  height: 5rem;
+  border-radius: 50%; }
+  @media screen and (min-width: 768px) {
+    .testimonial--img {
+      width: 100% !important;
+      height: 100%;
+      border-radius: 0%; } }
+
+.testimonial--before::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\F10D";
+  font-size: 2.5rem;
+  color: rgba(255, 126, 179, 0.5); }
+
+/* 2.11 Event Style */
+.event {
+  background: white; }
+  .event--img {
+    width: 100%;
+    margin-bottom: 1rem; }
+  .event--link:hover {
+    text-decoration: none;
+    color: #ff3286; }
+
+/* 2.12 Blog */
+.blog--img {
+  width: 100%;
+  margin-bottom: 1rem; }
+
+.blog--title:hover {
+  text-decoration: none; }
+
+.blog--date {
+  margin-bottom: .4rem;
+  display: block;
+  font-size: .7rem;
+  letter-spacing: .10rem;
+  color: #6c757d;
+  text-transform: uppercase; }
+
+.blog--link:hover {
+  text-decoration: none;
+  color: #ff3286; }
+
+/* 2.13 Footer */
+.footer--top {
+  background: #0d0f1f; }
+
+.footer--list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .footer--list-item, .footer--link {
+    color: #9292b4; }
+
+.footer--icon {
+  margin-right: 1rem;
+  color: #f8f9fa; }
+  .footer--icon:hover {
+    color: #FF7EB3; }
+
+.footer--link {
+  text-transform: capitalize; }
+  .footer--link:hover {
+    text-decoration: none;
+    color: #cecede; }
+
+.footer--bottom {
+  padding: 1.5rem 0;
+  background: #1B2144;
+  color: #f8f9fa; }
+
+.footer--copy {
+  color: #9292b4;
+  text-transform: capitalize; }
+  .footer--copy:hover {
+    color: #cecede;
+    text-decoration: none; }
+
+/* 2.14 Preloader */
+.preloader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: #1B2144;
+  z-index: 9999;
+  display: flex; }
+  .preloader--circle {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: auto;
+    border: 3px solid transparent;
+    border-top: 3px solid #00e5d4;
+    border-radius: 50%;
+    -webkit-animation: loaderAnimation 2s infinite linear;
+            animation: loaderAnimation 2s infinite linear; }
+    .preloader--circle::before {
+      content: '';
+      position: absolute;
+      top: .5rem;
+      left: .5rem;
+      bottom: .5rem;
+      right: .5rem;
+      border: 3px solid transparent;
+      border-top: 3px solid #7937fc;
+      border-radius: 50%;
+      -webkit-animation: loaderAnimation 3s infinite linear;
+              animation: loaderAnimation 3s infinite linear; }
+    .preloader--circle::after {
+      content: '';
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      bottom: 1rem;
+      right: 1rem;
+      border: 3px solid transparent;
+      border-top: 3px solid #f16a22;
+      border-radius: 50%;
+      -webkit-animation: loaderAnimation 1.5s infinite linear;
+              animation: loaderAnimation 1.5s infinite linear; }
+
+/* 2.14.1 Preloader Animation */
+@-webkit-keyframes loaderAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+@keyframes loaderAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+/*---------------------------------------
+    3. State Style
+-----------------------------------------*/
+/* 3.1 Full Screen Navigation */
+.is-nav-fullscreen {
+  height: 94vh;
+  position: relative; }
+
+/* 3.2 Vertical center */
+.is-align-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
+/*---------------------------------------
+    4. Theme Style
+-----------------------------------------*/
+/* 4.1 Background */
+.t-bg {
+  background: #e8eaf6; }
+  .t-bg-light, .blog {
+    background: #fafafd; }
+  .t-bg-dark {
+    background: #1B2144; }
+
+/* 4.2 Logo */
+.t-logo {
+  max-height: 1.9rem;
+  max-width: 4.8rem; }
+
+/* 4.3 Text ornament with theme color*/
+.t-text-top, .t-text-top--light {
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .15rem;
+  margin-bottom: .4rem;
+  display: block;
+  color: #FF7EB3;
+  text-transform: uppercase; }
+  .t-text-top--light {
+    color: #f8f9fa; }
+
+/* 4.4 Section Padding */
+.t-section-gap {
+  padding: 8rem 0; }
+
+/* 4.5 Hr Style */
+.t-hr {
+  width: 3rem;
+  height: .3rem;
+  margin: 1rem 0;
+  background: #FF7EB3; }
+
+/* 4.6 Full Screen Height */
+.t-vh-100 {
+  min-height: 100vh; }
+
+/* 4.7 Rating Color */
+.t-rating {
+  color: #ffcc00; }
+
+/* 4.8 theme Color */
+.t-theme-color {
+  color: #FF7EB3; }
+
+/* 4.9 card icon */
+.t-card-icon {
+  font-size: 1.75rem; }
+
+/* 4.10 Icon */
+.t-icon {
+  font-size: 3rem;
+  color: #decefe; }
+
+/* 4.11 Theme color dark */
+.t-color-dark {
+  color: #1D1D2A; }
+
+/* 4.12 Vertical alignment */
+.t-center-vertical {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
+/* 4.13 Image full width */
+.t-img {
+  width: 100%; }
+
+/* 4.14 padding for medium screen only */
+@media screen and (min-width: 768px) {
+  .t-md-gap {
+    padding: 6rem 0; } }
+
